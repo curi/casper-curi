@@ -1,6 +1,18 @@
 github deploy code is in the file:
 .github/workflows/main.yml
 
+BUILD NEW CSS FILES WITH:
+gulp build
+
+
+
+cd /Users/curi/Dropbox/c/www/cfghost
+ghost status
+ghost start
+
+
+
+
 
 
 TODO: improve multi-paragraph blockquotes
@@ -28,9 +40,6 @@ git pull upstream main
 updatecasper = !cd /Users/curi/Dropbox/c/www/cfghost/content/themes/casper-curi && git fetch upstream && git pull upstream master && git push
 
 
-cd /Users/curi/Dropbox/c/www/cfghost
-ghost status
-ghost start
 
 
 
