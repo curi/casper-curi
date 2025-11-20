@@ -1472,7 +1472,7 @@ is the very first element in the post content */
 
 .gh-content > blockquote:not([class]) {
     position: relative;
-    font-style: italic;
+/*    font-style: italic;*/
     padding: 0;
 }
 
