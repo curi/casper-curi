@@ -1,0 +1,8 @@
+{{#get "posts" filter=filter order=order limit="100" page=page as |posts pagination|}}
+    {{#foreach posts}}
+        <li><a href="{{url}}">{{title}}</a></li>
+    {{/foreach}}
+    {{#if pagination.next}}
+        {{> "all-post-links-by-filter" filter=filter order=order page=pagination.next}}
+    {{/if}}
+{{/get}}

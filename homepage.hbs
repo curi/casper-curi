@@ -57,11 +57,7 @@ into the {body} of the default.hbs template --}}
 	    <summary>Critical Fallibilism</summary>
 
 	    <ul>
-	    {{#get "posts" filter="tags:critical-fallibilism" limit='9999' order='published_at asc'}}
-	        {{#foreach posts}}
-	             <li><a href="{{url}}">{{title}}</a></li>
-	        {{/foreach}}
-	    {{/get}}
+	    {{> "all-post-links-by-filter" filter="tags:critical-fallibilism" order="published_at asc" page="1"}}
 	    </ul>
 	</details>
 
@@ -85,11 +81,7 @@ into the {body} of the default.hbs template --}}
 	        {{/foreach}}
 	    {{/get}}
 	    <ul>
-	    {{#get "posts" filter="tags:skills" limit='9999' order='published_at asc'}}
-	        {{#foreach posts}}
-	             <li><a href="{{url}}">{{title}}</a></li>
-	        {{/foreach}}
-	    {{/get}}
+	    {{> "all-post-links-by-filter" filter="tags:skills" order="published_at asc" page="1"}}
 	    </ul>
 	</details>
 
@@ -101,11 +93,7 @@ into the {body} of the default.hbs template --}}
 	        {{/foreach}}
 	    {{/get}}
 	    <ul>
-	    {{#get "posts" filter="tags:research" limit='9999' order='published_at desc'}}
-	        {{#foreach posts}}
-	             <li><a href="{{url}}">{{title}}</a></li>
-	        {{/foreach}}
-	    {{/get}}
+	    {{> "all-post-links-by-filter" filter="tags:research" order="published_at desc" page="1"}}
 	    </ul>
 	</details>
 
@@ -117,11 +105,7 @@ into the {body} of the default.hbs template --}}
 	        {{/foreach}}
 	    {{/get}}
 	    <ul>
-	    {{#get "posts" filter="tags:classics" limit='9999' order='published_at asc'}}
-	        {{#foreach posts}}
-	             <li><a href="{{url}}">{{title}}</a></li>
-	        {{/foreach}}
-	    {{/get}}
+	    {{> "all-post-links-by-filter" filter="tags:classics" order="published_at asc" page="1"}}
 	    </ul>
 	</details>
 
@@ -137,11 +121,7 @@ into the {body} of the default.hbs template --}}
 		        {{/foreach}}
 		    {{/get}}
 		    <ul>
-		    {{#get "posts" filter="tags:applications" limit='9999' order='published_at desc'}}
-		        {{#foreach posts}}
-		             <li><a href="{{url}}">{{title}}</a></li>
-		        {{/foreach}}
-		    {{/get}}
+		    {{> "all-post-links-by-filter" filter="tags:applications" order="published_at desc" page="1"}}
 		    </ul>
 		</details>
 
@@ -151,11 +131,7 @@ into the {body} of the default.hbs template --}}
 		<details closed>
 		    <summary>Shorts</summary>
 		    <ul>
-		    {{#get "posts" filter="tags:shorts" limit='9999' order='published_at desc'}}
-		        {{#foreach posts}}
-		             <li><a href="{{url}}">{{title}}</a></li>
-		        {{/foreach}}
-		    {{/get}}
+		    {{> "all-post-links-by-filter" filter="tags:shorts" order="published_at desc" page="1"}}
 		    </ul>
 		</details>
 
@@ -164,11 +140,7 @@ into the {body} of the default.hbs template --}}
 		<details closed>
 		    <summary>News</summary>
 		    <ul>
-		    {{#get "posts" filter="tags:news" limit='9999' order='published_at desc'}}
-		        {{#foreach posts}}
-		             <li><a href="{{url}}">{{title}}</a></li>
-		        {{/foreach}}
-		    {{/get}}
+		    {{> "all-post-links-by-filter" filter="tags:news" order="published_at desc" page="1"}}
 		    </ul>
 		</details>
 	

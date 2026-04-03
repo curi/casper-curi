@@ -1,0 +1,8 @@
+{{#get "posts" filter="tag:{{slug}}" limit="100" page=page as |posts pagination|}}
+    {{#foreach posts}}
+        <li><a href="{{url}}">{{title}}</a></li>
+    {{/foreach}}
+    {{#if pagination.next}}
+        {{> "all-post-links-by-tag" slug=slug page=pagination.next}}
+    {{/if}}
+{{/get}}

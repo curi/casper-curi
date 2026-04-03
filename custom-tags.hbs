@@ -9,21 +9,7 @@
     
     <h1 class="article-title">{{title}}</h1>
     
-        {{#get 'tags' include='count.posts' order='name asc' limit='9999'}}
-            {{#foreach tags}}
-
-            <details>
-                <summary>{{name}} ({{count.posts}})</summary>
-                <ul>
-                    {{#get "posts" filter="tag:{{slug}}" include="tags" limit='9999'}}
-                        {{#foreach posts}}
-                             <li><a href="{{url}}">{{title}}</a></li>
-                        {{/foreach}}
-                    {{/get}}
-                </ul>
-            </details>
-            {{/foreach}}
-        {{/get}}
+        {{> "all-tag-groups" page="1"}}
     </section>
 </article>
 

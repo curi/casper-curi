@@ -2,6 +2,18 @@ em, i {
     color: #3030BF;
 }
 
+html.dark-mode em,
+html.dark-mode i {
+    color: #8EA6FF;
+}
+
+@media (prefers-color-scheme: dark) {
+    html.auto-color em,
+    html.auto-color i {
+        color: #8EA6FF;
+    }
+}
+
 div.details_area {
     font-size: 120%;
 }

@@ -1,0 +1,13 @@
+{{#get "tags" include="count.posts" order="name asc" limit="100" page=page as |tags pagination|}}
+    {{#foreach tags}}
+        <details>
+            <summary>{{name}} ({{count.posts}})</summary>
+            <ul>
+                {{> "all-post-links-by-tag" slug=slug page="1"}}
+            </ul>
+        </details>
+    {{/foreach}}
+    {{#if pagination.next}}
+        {{> "all-tag-groups" page=pagination.next}}
+    {{/if}}
+{{/get}}
