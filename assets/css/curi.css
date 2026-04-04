@@ -219,26 +219,16 @@ body .article-header {
 
 
 
-/* add left borders on nested blockquotes */
-blockquote > blockquote {
-	border-left: 0.3rem solid var(--ghost-accent-color);
-	margin: 0;
-}
-
-/* within a blockquote, a paragraph or blockquote followed by a paragraph or blockquote should have a top margin on the following paragraph*/
-blockquote p + p, blockquote blockquote + p, blockquote p + blockquote {
-	margin-block-start: 1em;
-}
-
-
-/* alternative from https://forum.ghost.org/t/markdown-blockquotes-not-rendering-properly/31157/16
-blockquote p:first-child {
+/* keep nested and multi-paragraph quotes readable in rendered post content */
+.gh-content blockquote > * {
     margin-top: 0;
-}
-blockquote p {
-    margin: 1.5rem;
-}
-blockquote p:last-child {
     margin-bottom: 0;
 }
-*/
+
+.gh-content blockquote > * + * {
+    margin-top: 1em;
+}
+
+.gh-content blockquote blockquote {
+    border-left: 0.3rem solid var(--ghost-accent-color);
+}
