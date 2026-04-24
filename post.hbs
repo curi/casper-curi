@@ -99,11 +99,20 @@ into the {body} tag of the default.hbs template --}}
         {{content}}
     </section>
 
-    {{#if comments}}
-        <section class="article-comments gh-canvas">
-            {{comments}}
-        </section>
-    {{/if}}
+    <section class="article-comments gh-canvas">
+        <div id="discourse-comments"></div>
+        <script>
+            window.DiscourseEmbed = {
+                discourseUrl: 'https://discuss.criticalfallibilism.com/',
+                discourseEmbedUrl: '{{url absolute="true"}}'
+            };
+            (function() {
+                var d = document.createElement('script'); d.type = 'text/javascript'; d.async = true;
+                d.src = window.DiscourseEmbed.discourseUrl + 'javascripts/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(d);
+            })();
+        </script>
+    </section>
 
 </article>
 </main>
